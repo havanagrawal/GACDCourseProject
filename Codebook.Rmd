@@ -8,94 +8,94 @@ output: pdf_document
 This is the codebook for the Course Project for "Getting and Cleaning Data" Data Science course on Coursera.
 It describes the variables of the table output by the "run_analysis.R" file.
 
--subjectid   2
-  -The subject identifier
-  -1...30. A unique ID assigned to the subjects who performed activities
+- subjectid   2
+  - The subject identifier
+  - 1...30. A unique ID assigned to the subjects who performed activities
   
--activity    factor (6 levels)
-  -The activity that the subject performed
-    -Laying
-    -Sitting
-    -Standing
-    -Walking
-    -WalkingDownstairs
-    -WalkingUpstairs
+- activity    factor (6 levels)
+  - The activity that the subject performed
+    - Laying
+    - Sitting
+    - Standing
+    - Walking
+    - WalkingDownstairs
+    - WalkingUpstairs
     
 
--feature   factor (66 levels)
-  -The measurements from the accelerometer(acc) and gyroscope(gyro)
-  -The prefix t represents time domain signals.
-  -The prefix f represents frequency domain signals.
-  -x, y, z are the axes (direction) of measurement
-  -mean stands for average
-  -std stands for standard deviation
-    -tbodyaccmeanx
-    -tbodyaccmeany
-    -tbodyaccmeanz
-    -tbodyaccstdx
-    -tbodyaccstdy
-    -tbodyaccstdz
-    -tgravityaccmeanx
-    -tgravityaccmeany
-    -tgravityaccmeanz
-    -tgravityaccstdx
-    -tgravityaccstdy
-    -tgravityaccstdz
-    -tbodyaccjerkmeanx
-    -tbodyaccjerkmeany
-    -tbodyaccjerkmeanz
-    -tbodyaccjerkstdx
-    -tbodyaccjerkstdy
-    -tbodyaccjerkstdz
-    -tbodygyromeanx
-    -tbodygyromeany
-    -tbodygyromeanz
-    -tbodygyrostdx
-    -tbodygyrostdy
-    -tbodygyrostdz
-    -tbodygyrojerkmeanx
-    -tbodygyrojerkmeany
-    -tbodygyrojerkmeanz
-    -tbodygyrojerkstdx
-    -tbodygyrojerkstdy
-    -tbodygyrojerkstdz
-    -tbodyaccmagmean
-    -tbodyaccmagstd
-    -tgravityaccmagmean
-    -tgravityaccmagstd
-    -tbodyaccjerkmagmean
-    -tbodyaccjerkmagstd
-    -tbodygyromagmean
-    -tbodygyromagstd
-    -tbodygyrojerkmagmean
-    -tbodygyrojerkmagstd
-    -fbodyaccmeanx
-    -fbodyaccmeany
-    -fbodyaccmeanz
-    -fbodyaccstdx
-    -fbodyaccstdy
-    -fbodyaccstdz
-    -fbodyaccjerkmeanx
-    -fbodyaccjerkmeany
-    -fbodyaccjerkmeanz
-    -fbodyaccjerkstdx
-    -fbodyaccjerkstdy
-    -fbodyaccjerkstdz
-    -fbodygyromeanx
-    -fbodygyromeany
-    -fbodygyromeanz
-    -fbodygyrostdx
-    -fbodygyrostdy
-    -fbodygyrostdz
-    -fbodyaccmagmean
-    -fbodyaccmagstd
-    -fbodybodyaccjerkmagmean
-    -fbodybodyaccjerkmagstd
-    
--average   11
-  -The value of the feature's value averaged over the activity and subject.
-    -Eg: 1  Laying	tbodyaccmeanx	0.221598244
-    -The average value of tbodyaccmeanx 
-    -for subject 1 
-    -over all the records where he was Laying 
-    -is 0.221598244
+- feature   factor (66 levels)
+  - The measurements from the accelerometer(acc) and gyroscope(gyro)
+  - The prefix t represents time domain signals.
+  - The prefix f represents frequency domain signals.
+  - x, y, z are the axes (direction) of measurement
+  - mean stands for average
+  - std stands for standard deviation
+    - tbodyaccmeanx
+    - tbodyaccmeany
+    - tbodyaccmeanz
+    - tbodyaccstdx
+    - tbodyaccstdy
+    - tbodyaccstdz
+    - tgravityaccmeanx
+    - tgravityaccmeany
+    - tgravityaccmeanz
+    - tgravityaccstdx
+    - tgravityaccstdy
+    - tgravityaccstdz
+    - tbodyaccjerkmeanx
+    - tbodyaccjerkmeany
+    - tbodyaccjerkmeanz
+    - tbodyaccjerkstdx
+    - tbodyaccjerkstdy
+    - tbodyaccjerkstdz
+    - tbodygyromeanx
+    - tbodygyromeany
+    - tbodygyromeanz
+    - tbodygyrostdx
+    - tbodygyrostdy
+    - tbodygyrostdz
+    - tbodygyrojerkmeanx
+    - tbodygyrojerkmeany
+    - tbodygyrojerkmeanz
+    - tbodygyrojerkstdx
+    - tbodygyrojerkstdy
+    - tbodygyrojerkstdz
+    - tbodyaccmagmean
+    - tbodyaccmagstd
+    - tgravityaccmagmean
+    - tgravityaccmagstd
+    - tbodyaccjerkmagmean
+    - tbodyaccjerkmagstd
+    - tbodygyromagmean
+    - tbodygyromagstd
+    - tbodygyrojerkmagmean
+    - tbodygyrojerkmagstd
+    - fbodyaccmeanx
+    - fbodyaccmeany
+    - fbodyaccmeanz
+    - fbodyaccstdx
+    - fbodyaccstdy
+    - fbodyaccstdz
+    - fbodyaccjerkmeanx
+    - fbodyaccjerkmeany
+    - fbodyaccjerkmeanz
+    - fbodyaccjerkstdx
+    - fbodyaccjerkstdy
+    - fbodyaccjerkstdz
+    - fbodygyromeanx
+    - fbodygyromeany
+    - fbodygyromeanz
+    - fbodygyrostdx
+    - fbodygyrostdy
+    - fbodygyrostdz
+    - fbodyaccmagmean
+    - fbodyaccmagstd
+    - fbodybodyaccjerkmagmean
+    - fbodybodyaccjerkmagstd
+     
+- average   11
+  - The value of the feature's value averaged over the activity and subject.
+    - Eg: 1  Laying	tbodyaccmeanx	0.221598244
+    - The average value of tbodyaccmeanx 
+    - for subject 1 
+    - over all the records where he was Laying 
+    - is 0.221598244
