@@ -1,0 +1,68 @@
+---
+title: "README"
+author: "Havan Agrawal"
+date: "Saturday, January 24, 2015"
+output: pdf_document
+---
+
+- Read README.txt in the UCI HAR Dataset folder for information about the dataset
+
+This is a readme file for the run_analysis.R script that retrieves and cleans data from the UCI HAR Dataset.
+The dataset contains measurements from sensors in a Samsung Galaxy S II, for a variety of activities performed by 30 subjects.
+
+The input to the script is:
+============================
+- X_test.txt - The test set of variables
+- X_train.txt - The training set of variables
+- y_test.txt - The test set of labels
+- y_train.txt - The training set of variables
+- subject_test.txt - Corresponding subject id's for test set
+- subject_train.txt - Corresponding subject id's for training set
+- features.txt - List of all features.
+
+The output of the script is
+============================
+- cleanandtidysummarydata.txt - Containg values for 66 variables grouped by activity and subject
+
+Working
+============================
+Step 1:
+  - The script first reads in the data from the aforementioned input files into appropriate variables
+  - It then combines the training and test sets to create a single dataset, using the rbind operation
+  - It also reads in the names of the features.
+  
+Step 2:
+  - By using pattern matching, it finds the indices of those variables that contain "mean" and "std" in the feature name
+  - It then extracts the data from the previously combined dataset corresponding to these indices
+  
+Step 3:
+  - It uses descriptive activity names to label the activities
+  - A character vector is created
+  - The numbers 1-6 are replaced with the corresponding index activities.
+  - At this point, all the data required is ready
+  - Hence a complete_data data.frame is created to store the clean data
+  - The ones variable is used to keep track of records containing information about the same subject performing the same activity for the same measurement. Hence this allows us to find the total no. of records for each such combination.
+  
+Step 4:
+  - Descriptive variable names are assigned
+  - Convention followed is:
+    - No non-alphanumeric characters used
+    - All lower case for readablity and ease of use in R
+  
+Step 5:
+  - xtabs is used to group by activity and subject_id
+  - A sum total for each measurement is then calculated
+  - A sum of the number of records is also available for each combination
+  - The mean is then calculated by dividing the sum of measurements by the no. of records
+  - A flat table is then created for readability in R
+  - The final dataset is written to the output file.
+  
+The code for reading the clean data back into R is:
+============================
+file_path <- "./cleanandtidysummarydata.txt"
+data <- read.table(file_path, header = TRUE)
+View(data)
+
+Also read https://class.coursera.org/getdata-010/forum/thread?thread_id=49 for reference.
+Most ambiguities about the possible solutions is discussed there.
+    
